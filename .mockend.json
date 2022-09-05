@@ -1,0 +1,20 @@
+{
+    "User": {
+        "id": "uuid",
+        "first_name": "firstName",
+        "last_name": "lastName",
+        "email": "email",
+        "birth_day": {
+            "date": "Y-m-d"
+        },
+        "bio": {
+            "text": [100]
+        },
+        "latitude": {
+            "latitude": [-45,45]
+        },
+        "longitude": {
+            "longitude": [-90,90]
+        }    
+    }
+}
