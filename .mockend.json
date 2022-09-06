@@ -1,20 +1,28 @@
 {
     "User": {
-        "id": "uuid",
-        "first_name": "firstName",
-        "last_name": "lastName",
-        "email": "email",
+        "id": { 
+            "int": { "min": 1000, "max": 9999 } 
+        },
+        "first_name": { 
+            "regexp": "[A-Z][a-z]{5,10}" 
+        },
+        "last_name": { 
+            "regexp": "[A-Z][a-z]{7,12}" 
+        },
+        "email": { 
+            "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}" 
+        },
         "birth_day": {
-            "date": "Y-m-d"
+            "dateTime": {
+                "min": "2000-01-01",
+                "max": "2005-12-31"
+            }
         },
         "bio": {
-            "text": [100]
+            "loremSentences": { "minLength": 100, "maxLength": 200 }
         },
-        "latitude": {
-            "latitude": [-45,45]
-        },
-        "longitude": {
-            "longitude": [-90,90]
-        }    
+        "avatar": {
+            "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
+        }
     }
 }
